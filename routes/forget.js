@@ -24,7 +24,7 @@ router.post("/forget", async (req, res) => {
         const info = await transporter.sendMail({
           from: process.env.EMAIL,
           to: req.body.email,
-          subject: "Reset your passoword",
+          subject: "Reset your Passoword",
           html: `
                 <div> 
                 <p  style="color: black;  font-variant: small-caps; font-family: sans-serif; font-size:22px"> Hello <b>${user.name}</b> your password change request is successfully initiated.</p>
